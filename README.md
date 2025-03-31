@@ -2,12 +2,27 @@
 # ClientServerBasics (2.0)
 Starter code for the basic client-server assignment
 
+-----------------------------------------------------------------------------
 
-Este template corresponde ao exemplo da Fig. 2.3 do livro. O exercício consiste em acrescentar funcionalidade ao servidor para torná-lo mais útil. Essa funcionalidade deve ser acessível aos clientes. Por exemplo, o servidor pode ser uma espécie de calculadora remota. O cliente passa dois valores numéricos, juntamente com o nome de uma operação (ex.: add, subtract, multiply, divide) e o servidor executa a operação respectiva e retorna seu resultado para o cliente. Você pode implementar outro tipo de servidor (diferente da calculadora). O imporante é que ele ofereça pelo menos três operações diferentes que os clientes podem utilizar remotamente, passando dados para serem processados e recebendo o resultado desse processamento como resposta.
+# Projeto de Integração de API com Comunicação via Sockets e Túnel SSH
 
-Tarefa individual.
+Este projeto demonstra como integrar uma API de conversão de unidades (implementada em C#) com um servidor e cliente Python que se comunicam via sockets. O servidor Python, ao receber um comando do cliente, estabelece um túnel SSH com uma instância AWS para consumir a API e retornar o resultado ao cliente.
 
-Incluir um Readme descritivo do sistema implementado.
+## Arquivos do Projeto
+
+- **server.py**: Servidor Python que recebe requisições via socket, cria um túnel SSH para a instância AWS e consome a API.
+- **client.py**: Cliente Python que envia comandos formatados ao servidor.
+- **constCS.py**: Configurações de conexão para a comunicação entre cliente e servidor.
+- **Arquivo .pem**: Chave privada para conexão SSH com a instância AWS.
+
+## Pré-requisitos
+
+- Python 3.x instalado.
+- Instalar os pacotes necessários:
+
+  ```bash
+  pip install requests sshtunnel
+
 
 -----------------------------------------------------------------------------
 
